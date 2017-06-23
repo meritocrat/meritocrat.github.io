@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Brava Negocios</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="style/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="style/main.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 	<script type="text/javascript" src="js/bootstrap.js"></script>
+ 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<body>
+
+<div class="container-fluid bg-color">
+<div class="row">
+
+<div class="col-md-3">
+<div class="logo">
+<img src="images/bravalogo.jpg" class="img-responsive">
+
+</div>
+</div>
+
+<div class="col-md-7">
+ <nav class="animenu"> 
+  <button class="animenu__toggle pull-right">
+    <span class="animenu__toggle__bar"></span>
+    <span class="animenu__toggle__bar"></span>
+    <span class="animenu__toggle__bar"></span>
+  </button>
+  <ul class="animenu__nav">
+    <li>
+      <a href="#">INSTITUCIONAL</a>
+      <ul class="animenu__nav__child">
+        <li><a href="">Visao Geral</a></li>
+        <li><a href="">Nossos Valores</a></li>
+        <li><a href="">Nossa Abordagem</a></li>
+      </ul>
+    </li>   
+
+     <li>
+      <a href="#">EQUIPE</a>
+    </li>
+
+    <li>
+      <a href="#">AREAS DE NEGOCIO</a>
+      <ul class="animenu__nav__child">
+        <li><a href="">Sub Item 1</a></li>
+        <li><a href="">Sub Item 2</a></li>
+        <li><a href="">Sub Item 3</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">NOTICIAS</a>
+    </li>
+    <li>
+      <a href="#">CONTATO</a>
+    </li>                 
+  </ul>
+</nav>
+</div>
+
+</div>
+</div>
+
+
+<div id="carousel-example" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example" data-slide-to="1"></li>
+    <li data-target="#carousel-example" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner">
+    <div class="item active">
+      <a href="#"><img src="images/carousel1.jpg" /></a>
+    <div class="carousel-caption">
+        <h3>NOTICIAS</h3>
+        <h3 class="slide-border"></h3>
+      </div>
+    </div>
+    <div class="item">
+      <a href="#"><img src="images/caroussel2.jpg" /></a>
+  
+      <div class="carousel-caption">
+        <h3>INSTITUCIONAL</h3>
+        <h3 class="slide-border"></h3>
+      </div>
+
+    </div>
+    <div class="item">
+      <a href="#"><img src="images/carousel3.jpg" /></a>
+  
+    <div class="carousel-caption">
+        <h3>AREAS DE NEGOCIO</h3>
+        <h3 class="slide-border"></h3>
+      </div>
+
+    </div>
+
+    <div class="item">
+      <a href="#"><img src="images/carousel4.jpg" /></a>
+  
+    <div class="carousel-caption">
+        <h3>CONTATO</h3>
+        <h3 class="slide-border"></h3>
+      </div>
+
+    </div>
+  </div>
+
+  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+    <span class="fa fa-angle-left" aria-hidden="true"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+    <span class="fa fa-angle-right"></span>
+  </a>
+</div>
+
+
+<div class="container-fluid footer-bg">
+<div class="row">
+
+<div class="col-md-7 footer">
+<ul>
+<li><a href="">Legal</a></li>
+<span>| </span>
+<li><a href="">Cookies </a></li>
+<span> | </span>
+<li><a href=""> Privacy </a></li>
+</ul>
+
+</div>
+
+<div class="col-md-4 footer">
+<p>2016 Brava Negocios</p>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+	
+(function(){
+  var animenuToggle = document.querySelector('.animenu__toggle'),
+      animenuNav    = document.querySelector('.animenu__nav'),
+      hasClass = function( elem, className ) {
+        return new RegExp( ' ' + className + ' ' ).test( ' ' + elem.className + ' ' );
+      },
+      toggleClass = function( elem, className ) {
+        var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+        if( hasClass(elem, className ) ) {
+          while( newClass.indexOf( ' ' + className + ' ' ) >= 0 ) {
+            newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+          }
+          elem.className = newClass.replace( /^\s+|\s+$/g, '' );
+        } else {
+          elem.className += ' ' + className;
+        }
+      },           
+      animenuToggleNav =  function (){        
+        toggleClass(animenuToggle, "animenu__toggle--active");
+        toggleClass(animenuNav, "animenu__nav--open");        
+      }
+
+  if (!animenuToggle.addEventListener) {
+      animenuToggle.attachEvent("onclick", animenuToggleNav);
+  }
+  else {
+      animenuToggle.addEventListener('click', animenuToggleNav);
+  }
+})()      
+	
+</script>
